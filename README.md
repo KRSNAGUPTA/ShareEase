@@ -40,7 +40,7 @@ To get started with ShareEase, follow these steps:
 
 5. **Start the backend server**:
    ```bash
-   npm start
+   npm run dev
    ```
 
 6. **Navigate to the frontend directory**:
