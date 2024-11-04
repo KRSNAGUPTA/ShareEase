@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import { useParams } from 'react-router-dom';  
+import { useParams } from 'react-router-dom';
 import './App.css';
+import HomePage from './pages/HomePage.jsx';
 
 const NotFound = lazy(() => import('./components/NotFound.jsx'));
 
@@ -11,7 +12,8 @@ function App() {
       <Router>
         <Suspense fallback={<h1>Loading...</h1>}>
           <Routes>
-            <Route path="/:slug" element={<SluggedNotFound />} /> {/* for testing only , slug find krne ke liye*/} 
+            <Route path="/" element={<HomePage />} />
+            <Route path="/:slug" element={<SluggedNotFound />} /> {/* for testing only , slug find krne ke liye*/}
           </Routes>
         </Suspense>
       </Router>
@@ -20,7 +22,7 @@ function App() {
 }
 
 function SluggedNotFound() {
-  const { slug } = useParams(); 
+  const { slug } = useParams();
   return <NotFound slug={slug} />;
 }
 
