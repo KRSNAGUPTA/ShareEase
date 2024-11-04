@@ -1,6 +1,8 @@
+import NavBar from "../components/NavBar";
+
 function FileShare() {
     return (
-        <div></div>
+        <NavBar />
     )
 }
 

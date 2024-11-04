@@ -1,6 +1,12 @@
+import NavBar from "../components/NavBar";
+import Intro from "../components/Intro";
+
 function HomePage() {
     return (
-        <div></div>
+        <>
+            <NavBar />
+            <Intro />
+        </>
     )
 }
 
