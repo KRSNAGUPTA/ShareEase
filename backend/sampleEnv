@@ -1,5 +1,0 @@
-PORT = 3000
-CORS_ORIGIN = "http://localhost:5173"
-IMGUR_CLIENT_ID = ""
-IMGUR_CLIENT_SECRET = ""
-MONGODB_URI = "mongodb://localhost:27017/<dbname>"
