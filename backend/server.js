@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import imageRoute from "./src/routes/imageRoute.js";
 import linkRoute from "./src/routes/shortLinkRoute.js";
+import fileRoute from "./src/routes//fileRoute.js";
 import { checkSlug, getLink } from "./src/controllers/slugControllers.js";
 import connectDB from "./src/config/db.js";
 
@@ -39,6 +40,7 @@ app.get('/api/getlink/:slug', getLink);
 // Route for image-related requests
 app.use('/api/image', imageRoute);
 app.use('/api/link',linkRoute );
+app.use('/api/file',fileRoute);;
 
 // Start the server
 app.listen(PORT, (err) => {
