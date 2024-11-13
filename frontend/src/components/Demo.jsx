@@ -17,7 +17,7 @@ export function Intro({ children, to, button }) {
                 {children}
             </p>
             <Link to={to}>
-                <button className='bg-[var(--light)] text-3xl text-dark rounded-xl px-8 py-2'>
+                <button className='bg-[var(--light)] text-3xl text-background rounded-xl px-8 py-2'>
                     {button} Now
                 </button>
             </Link>
@@ -27,7 +27,7 @@ export function Intro({ children, to, button }) {
 
 export function Video() {
     return (
-        <video width="100%" height="auto" className='flex-1 border border-white bg-[var(--light)] shadow-custom rounded-xl' autoPlay loop muted>
+        <video width="100%" height="auto" className='flex-1 border border-white bg-primary shadow-custom rounded-xl' autoPlay loop muted>
             {/* <source src={videoFile} type="video/webm" /> */}
         </video>
     )
