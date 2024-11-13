@@ -15,7 +15,7 @@ function HomePage() {
                     <Video></Video>
                     <Intro to="/shorten" button="Shorten">Make your links easy to memorize!</Intro>
                 </Demo>
-            </div>
+            </div>7
         </>
     )
 }
