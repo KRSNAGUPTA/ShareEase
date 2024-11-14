@@ -1,9 +1,9 @@
-import NavBar from "../components/NavBar";
+import React from 'react'
 
 function LinkShortner() {
-    return (
-        <NavBar />
-    )
+  return (
+    <div>LinkShortner</div>
+  )
 }
 
-export default LinkShortner;
+export default LinkShortner
