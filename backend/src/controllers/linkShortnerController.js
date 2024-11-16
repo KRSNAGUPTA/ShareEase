@@ -1,5 +1,6 @@
+import slugLinkModel from "../models/slugLinkModel.js";
 import SlugLink from "../models/slugLinkModel.js";
-import generateSlug from "../utils/generateSlug.js"
+import generateSlug from "../utils/generateSlug.js";
 
 const linkShortner = async (req, res) => {
   try {
@@ -10,6 +11,12 @@ const linkShortner = async (req, res) => {
     if (!slug) {
       slug = await generateSlug();
     }
+
+    const available = await slugLinkModel.findOne({ slug: slug });
+    if (available) {
+      return res.status(409).json({ message: `Slug ${slug} used!` });
+    }
+
     const data = {
       slug,
       originalLink: link,
@@ -27,4 +34,4 @@ const linkShortner = async (req, res) => {
   }
 };
 
-export {linkShortner}
+export { linkShortner };
