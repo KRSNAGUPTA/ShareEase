@@ -1,7 +1,7 @@
 import SlugLink from "../models/slugLinkModel.js";
 
 const checkSlug = async (req, res) => {
-  const { slug } = req.params;
+  const { slug } = req.params || req.body;
 
   try {
     const available = await SlugLink.findOne({ slug: slug });
@@ -11,7 +11,7 @@ const checkSlug = async (req, res) => {
     res.status(200).json({ message: `You can use ${slug} slug!` });
   } catch (error) {
     console.error(error);
-    res.status(500).json("Error while checking slug ", error.message);
+    res.status(500).json({ message: `Error while checking slug: ${error.message}` });
   }
 };
 
@@ -26,10 +26,17 @@ const getLink = async (req, res) => {
       return res.status(404).json({ message: `Slug ${slug} not found` });
     }
     const originalLink = data.originalLink;
-    return res.status(200).json({ message: "Original link fetched with slug", data: { originalLink } });
+    return res
+      .status(200)
+      .json({
+        message: "Original link fetched with slug",
+        data: { originalLink },
+      });
   } catch (error) {
     console.error(`Error while getting link ${error.message}`);
-    res.status(500).json({ message: `Error while getting link ${error.message}` });
+    res
+      .status(500)
+      .json({ message: `Error while getting link ${error.message}` });
   }
 };
 
