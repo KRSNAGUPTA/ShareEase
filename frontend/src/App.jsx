@@ -5,6 +5,7 @@ import './App.css';
 import HomePage from './pages/HomePage.jsx';
 import FileShare from './pages/FileShare.jsx';
 import LinkShortner from './pages/LinkShortner.jsx';
+import RedirectPage from './pages/RedirectPage';
 
 const NotFound = lazy(() => import('./components/NotFound.jsx'));
 
@@ -17,7 +18,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="share" element={<FileShare />} />
             <Route path="shorten" element={<LinkShortner />} />
-            <Route path="/:slug" element={<SluggedNotFound />} /> {/* for testing only , slug find krne ke liye*/}
+            <Route path='/:slug' element={<RedirectPage />} />
+            {/* <Route path="/:slug" element={<SluggedNotFound />} /> for testing only , slug find krne ke liye */}
           </Routes>
         </Suspense>
       </Router>
