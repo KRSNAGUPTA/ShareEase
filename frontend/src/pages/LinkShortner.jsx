@@ -36,7 +36,7 @@ function LinkShortenerCard() {
       toast.error("Please enter a valid link.");
       return;
     }
-    const res = await api.post("/link", { link: originalLink, slug });
+    const res = await api.post("/link", { link: originalLink, slug , isLink: true});
     if (res.status === 200) {
       setShortenedUrl(res.data.slug);
       toast.success("Link shortened successfully.");
@@ -44,6 +44,7 @@ function LinkShortenerCard() {
       toast.error("An error occurred while shortening the link.");
     }
   };
+
   const copyToClipBoard = () => {
     navigator.clipboard.writeText(
       `${import.meta.env.VITE_FRONTEND_URL}/${shortenedUrl}`
@@ -82,7 +83,7 @@ function LinkShortenerCard() {
                 htmlFor="slug"
                 className="block text-sm font-medium text-foreground"
               >
-                Customize your link !
+                Customize your link!
               </label>
               <div className="mt-1 flex items-center gap-3">
                 <span className="text-sm text-muted-foreground">
