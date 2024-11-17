@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable react/prop-types, no-unused-vars */
 import React from "react";
 
 const NotFound = ({ slug = "kuch nhi aya" }) => {
