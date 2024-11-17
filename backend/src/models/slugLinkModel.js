@@ -21,6 +21,10 @@ const slugLinkSchema = new Schema(
         message: (props) => `${props.value} is not a valid URL!`,
       },
     },
+    isLink:{
+      type:Boolean,
+      required:false
+    }
   },
   {
     timestamps: true,
