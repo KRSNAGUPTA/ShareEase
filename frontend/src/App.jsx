@@ -7,7 +7,7 @@ import FileShare from './pages/FileShare.jsx';
 import LinkShortner from './pages/LinkShortner.jsx';
 import RedirectPage from './pages/RedirectPage';
 
-const NotFound = lazy(() => import('./components/NotFound.jsx'));
+const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
             <Route path="share" element={<FileShare />} />
             <Route path="shorten" element={<LinkShortner />} />
             <Route path='/:slug' element={<RedirectPage />} />
-            {/* <Route path="/:slug" element={<SluggedNotFound />} /> for testing only , slug find krne ke liye */}
+            <Route path="/notfound" element={<SluggedNotFound />} /> 
           </Routes>
         </Suspense>
       </Router>
