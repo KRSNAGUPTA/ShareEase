@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import NavBar from "@/components/NavBar";
 import api from "@/util/api";
 import { Copy } from "lucide-react";
@@ -53,9 +54,9 @@ function LinkShortenerCard() {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center bg-background">
+    <div className="flex flex-col items-center bg-background">
       <NavBar />
-      <div className="flex items-center justify-center w-full flex-1 p-4">
+      <div className="flex justify-center w-full flex-1 p-4">
         <div className="w-full max-w-lg mx-auto p-6 pt-8 bg-background rounded-2xl shadow-md border">
           <h2 className="text-2xl font-bold text-center text-primary mb-8">
             Shorten Your Link
@@ -95,7 +96,7 @@ function LinkShortenerCard() {
                   value={slug}
                   onChange={(e) => setSlug(e.target.value)}
                   placeholder="Enter your suffix"
-                  className="border-b-2 flex-1 px-4 py-2 rounded-xl text-sm focus:outline-none"
+                  className="border-b-2 flex-1 px-4 py-2 text-sm focus:outline-none"
                 />
                 <button
                   onClick={checkAvailability}

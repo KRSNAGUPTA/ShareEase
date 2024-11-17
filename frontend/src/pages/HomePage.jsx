@@ -7,7 +7,7 @@ function HomePage() {
     <>
       <div className="w-full h-screen">
         <NavBar />
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-20 pb-20">
           <Demo className="flex sm:flex-wrap">
             <Intro to="/share" button="Share">
               Share files in almost no time!

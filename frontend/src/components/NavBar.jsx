@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types, no-unused-vars */
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -86,7 +87,6 @@ function NavBar() {
                 className="flex items-center gap-2 text-foreground transition-colors hover:text-primary"
               >
                 <Github className="h-5 w-5" />
-                
               </a>
             </nav>
           </SheetContent>
