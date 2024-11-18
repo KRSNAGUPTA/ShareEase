@@ -24,7 +24,7 @@ function NotFoundPage() {
             href="/"
             rel="noopener noreferrer"
             aria-label="home button"
-            className="bg-white text-primary font-bold px-6 py-2 rounded-full m-4 hover:shadow-inner active:scale-95 transition-all duration-900 ease-in-out animate-pulse hover:text-secondary hover:bg-primary"
+            className="bg-white text-dark font-bold px-6 py-2 rounded-full m-4 hover:shadow-inner active:scale-95 transition-all duration-900 ease-in-out animate-pulse hover:text-secondary hover:bg-primary"
           >
             Go to Home
           </a>

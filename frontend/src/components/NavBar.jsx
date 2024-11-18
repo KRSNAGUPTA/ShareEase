@@ -21,7 +21,7 @@ function NavBar() {
       <Link
         to={to}
         className={`hover:text-primary transition-colors ${
-          isActive ? "text-primary font-semibold" : "text-foreground"
+          isActive ? "text-light font-semibold" : "text-foreground"
         }`}
       >
         {children}
@@ -35,7 +35,7 @@ function NavBar() {
         {/* Logo */}
         <h1 className="font-black text-xl sm:text-2xl md:text-3xl">
           <Link to="/">
-            Share<span className="text-primary">Ease</span>
+            Share<span className="text-light">Ease</span>
           </Link>
         </h1>
 

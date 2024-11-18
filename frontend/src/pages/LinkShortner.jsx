@@ -77,7 +77,7 @@ function LinkShortenerCard() {
                 id="originalLink"
                 value={originalLink}
                 onChange={(e) => setOriginalLink(e.target.value)}
-                placeholder="Enter your original link"
+                placeholder="Enter your link"
                 className="mt-1 w-full px-4 py-3 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
@@ -89,7 +89,7 @@ function LinkShortenerCard() {
               >
                 Customize your link!
               </label>
-              <div className="mt-1 flex items-center gap-3">
+              <div className="mt-1 flex items-center gap-2">
                 <span className="text-sm text-muted-foreground">
                   {import.meta.env.VITE_FRONTEND_URL}/
                 </span>
@@ -99,23 +99,21 @@ function LinkShortenerCard() {
                   value={slug}
                   onChange={(e) => setSlug(e.target.value)}
                   placeholder="Enter your suffix"
-                  className="border-b-2 flex-1 px-4 py-2 rounded-xl text-sm focus:outline-none"
+                  className="border-b-2 w-24 flex-1 px-4 py-2 rounded-xl text-sm focus:outline-none"
                 />
-                <button
-                  onClick={checkAvailability}
-                  disabled={!slug.trim()}
-                  className="w-full sm:w-auto px-4 py-2 text-sm font-semibold text-primary rounded-full active:scale-90 hover:bg-secondary disabled:bg-muted transition"
-                >
-                  Check
-                </button>
               </div>
             </div>
-
-            {/* Shorten Link Button */}
+            <button
+              onClick={checkAvailability}
+              disabled={!slug.trim()}
+              className="w-full sm:w-auto px-4 py-2 text-sm font-semibold  rounded-full active:scale-90 disabled:bg-muted transition bg-white hover:bg-light text-dark hover: text-primary "
+            >
+              Available ?
+            </button>
             <button
               onClick={shortenLink}
               disabled={!originalLink.trim() || !isAvailable}
-              className="w-full sm:w-auto px-4 py-2 text-sm font-semibold bg-[var(--light)] text-background rounded-full hover:bg-secondary active:scale-90 disabled:bg-muted transition"
+              className="w-full sm:w-auto px-4 py-2 text-sm font-semibold bg-light text-background hover:bg-white hover:text-dark rounded-full active:scale-90 disabled:bg-muted transition"
             >
               Shorten Link
             </button>
