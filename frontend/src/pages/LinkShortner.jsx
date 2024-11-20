@@ -22,7 +22,7 @@ function LinkShortenerCard() {
       }
     } catch (error) {
       if (error.response.status === 409) {
-        toast.error(`${slug} is already taken. Please choose another slug.}`);
+        toast.error(`${slug} is already taken. Please choose another slug.`);
       }
     }
   };
@@ -143,10 +143,11 @@ function LinkShortenerCard() {
       </div>
       <ToastContainer
         position="bottom-center"
-        // theme="dark"
-        autoClose={2000}
-        hideProgressBar={false}
-        className={`text-white`}
+        hideProgressBar={true}
+        autoClose={1500}
+        toastClassName={'rounded-full bg-transparent border-t-2 border-b-2'}
+        closeButton= {false}
+        newestOnTop={true}
       />
     </div>
   );
