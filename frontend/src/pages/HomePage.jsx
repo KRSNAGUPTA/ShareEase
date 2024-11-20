@@ -12,10 +12,10 @@ function HomePage() {
             <Intro to="/share" button="Share">
               Share files in almost no time!
             </Intro>
-            <Video></Video>
+            <Video url = {"https://www.youtube.com/embed/dQw4w9WgXcQ"}/>
           </Demo>
-          <Demo>
-            <Video></Video>
+          <Demo className="flex sm:flex-wrap">
+            <Video url = {"https://www.youtube.com/embed/dQw4w9WgXcQ"}/>
             <Intro to="/shorten" button="Shorten">
               Make your links easy to memorize!
             </Intro>
